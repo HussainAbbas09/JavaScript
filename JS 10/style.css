@@ -1,0 +1,38 @@
+body {
+    font-family: Arial;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.quiz {
+    background: white;
+    width: 400px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.answer {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    cursor: pointer;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#restart {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    .quiz {
+        width: 85%;
+    }
+}
