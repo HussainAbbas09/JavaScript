@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Collection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Store</h1>
+        <p>Shopping Cart: <span id="cart">0</span></p>
+    </header>
+
+    <div class="container">
+
+        <aside>
+            <h2>Filters</h2>
+
+            <h3>Categories</h3>
+            <div id="categories"></div>
+
+            <h3>Price Range</h3>
+            <input type="number" id="minPrice" placeholder="Min Price">
+            <input type="number" id="maxPrice" placeholder="Max Price">
+
+            <h3>Rating</h3>
+            <select id="rating">
+                <option value="0">All Ratings</option>
+                <option value="4">4 Stars & Above</option>
+                <option value="3">3 Stars & Above</option>
+                <option value="2">2 Stars & Above</option>
+                <option value="1">1 Star & Above</option>
+            </select>
+
+            <button onclick="clearFilters()">Clear All Filters</button>
+        </aside>
+
+        <main>
+            <div class="top">
+                <input type="text" id="search" placeholder="Search products...">
+
+                <select id="sort">
+                    <option value="default">Default Sorting</option>
+                    <option value="low">Price: Low to High</option>
+                    <option value="high">Price: High to Low</option>
+                    <option value="ratingLow">Rating: Low to High</option>
+                    <option value="ratingHigh">Rating: High to Low</option>
+                    <option value="az">Name: A to Z</option>
+                    <option value="za">Name: Z to A</option>
+                </select>
+            </div>
+
+            <h3 id="total"></h3>
+
+            <div id="products" class="products"></div>
+
+            <p id="message"></p>
+
+            <button id="loadMore" onclick="loadMore()">Load More</button>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
